@@ -25,6 +25,7 @@ pypdf
 # API & Networking
 openai
 requests
+flask
 
 # Utilities
 python-dotenv
