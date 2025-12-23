@@ -1,9 +1,13 @@
 import axios from 'axios'
 import { useAuthStore } from '../store/authStore'
 
+// Prefer explicit backend URL in production, fall back to relative /api (dev/proxy)
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || '/api'
+
 // Create axios instance
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
